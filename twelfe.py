@@ -6,7 +6,6 @@
 import argparse
 from typing import Any
 from elf import *
-from util import read_bytes
 
 
 def main():
@@ -38,19 +37,6 @@ def main():
 
     if args["section"]:
         elf.print_section_headers()
-
-    first_addr = int(elf.elf_header.prog_entry, 16)
-    #rat = elf.read_at_address(first_addr, 8)
-    rat = elf.read_opcodes(first_addr+2, 3)
-    print(
-        f"Expecting First instruction at: {elf.elf_header.prog_entry} / {rat}")
-
-    executable_section = elf.get_section_by_flag("X")
-    for es in executable_section:
-        print(es.name)
-        print(es.addr.lstrip('0'))
-        first_instruction = read_bytes(elf.bytes, int(es.offset, 16), count=8)
-        print(f"First instruction: {first_instruction}")
 
 
 def read_args() -> dict[str, Any]:
