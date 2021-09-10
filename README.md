@@ -1,7 +1,11 @@
 # twelfe
 A python script for parsing Linux ELF files.
 
-### Prerequisites:
+### Naming
+
+ELF + 1 = Twelfe
+
+### Prerequisites
 Uses just one third party library:
 
 * argparse : For parsing command line arguments
@@ -22,7 +26,22 @@ $ pip install -e .
 ```
 
 
-# Example:
+# Examples
+Get all flags:
+
+```console
+$ python3 twelfe.py --help
+usage: twelfe.py [-h] -f FILE [-e] [-s] [-p] [-a]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  Path to ELF file
+  -e, --elf             Print ELF Header
+  -s, --section         Print Section Headers
+  -p, --program         Print Program Headers
+  -a, --all             Print All Headers
+```
+
 
 Print the ELF header:
 ```console
@@ -111,7 +130,9 @@ W = Write, A = Alloc, X = Executabe, M = Merge, S = Strings, I = Info, O = Link 
 
 ```
 
-### Developer Information:
+### Developer Information
 
-Currently all field are **strings**. This results from simply parsing the hex bytes of the file. When integers are needed (for example for calculating), you can use `int(value, 16)` to simply parse the fields.
+Currently all field are **strings**. This results from simply parsing the hex bytes of the file. When integers are needed (for example for calculating), you can use `int(value, 16)` to simply convert the fields to integers.
+
+We provided a simple 64-bit and 32-bit ELF binary for testing (test and test32). Source Code can be found in *test.c*.
 
