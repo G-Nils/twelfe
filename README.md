@@ -148,5 +148,5 @@ executable_sections = elf_file.get_section_by_flag("X")
 Most of the functionalities that are included where a result of demand. However there are some other features I might include in the future.
 - [x] Create setup.py installer
 - [ ] Add utilities getters to get section/program headers by attribute, for example *get_section_by_name*
-- [ ] Add utilities getters to get content of section/program headers
+- [ ] Add utilities getters to get content of sections
 - [ ] Add tests
