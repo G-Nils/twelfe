@@ -3,7 +3,7 @@ A python script for parsing Linux ELF files.
 
 ### Naming
 
-ELF + 1 = Twelfe
+ELF ([Elf-Wikipedia](https://de.wikipedia.org/wiki/Elf)) + 1 = Twelfe
 
 ### Prerequisites
 Uses just one third party library:
