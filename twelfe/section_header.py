@@ -4,7 +4,7 @@
 """
 
 
-from util import read_bytes
+from .util import read_bytes
 
 
 class SECTION_HEADER(object):

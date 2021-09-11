@@ -20,9 +20,7 @@ Otherwise run `pip install argparse`.
 ```console
 $ git clone https://github.com/G-Nils/twelfe.git
 
-$ cd twelfe
-
-$ pip install -e .
+$ sudo python3 setup.py install
 ```
 
 
@@ -136,3 +134,19 @@ Currently all field are **strings**. This results from simply parsing the hex by
 
 We provided a simple 64-bit and 32-bit ELF binary for testing (test and test32). Source Code can be found in *test.c*.
 
+To use the modules in python projects, they have to be imported.
+
+For example, to get all executable sections within the ELF file:
+```python3
+from twelfe.elf import ELF
+
+elf_file = ELF.from_file(executable)
+executable_sections = elf_file.get_section_by_flag("X")
+```
+
+### TODOs
+Most of the functionalities that are included where a result of demand. However there are some other features I might include in the future.
+[x] Create setup.py installer
+[ ] Add utilities getters to get section/program headers by attribute, for example *get_section_by_name*
+[ ] Add utilities getters to get content of section/program headers
+[ ] Add tests

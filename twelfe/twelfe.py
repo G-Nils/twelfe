@@ -5,7 +5,7 @@
 
 import argparse
 from typing import Any
-from elf import *
+from .elf import *
 
 
 def main():
