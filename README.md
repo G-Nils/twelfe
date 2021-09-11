@@ -20,7 +20,9 @@ Otherwise run `pip install argparse`.
 ```console
 $ git clone https://github.com/G-Nils/twelfe.git
 
-$ sudo python3 setup.py install
+$ cd twelfe 
+
+$ pip install . --user
 ```
 
 

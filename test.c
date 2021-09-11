@@ -15,4 +15,5 @@ int main()
     printf("Hello World\n");
     print_one();
     print_two();
+    return 0;
 }
