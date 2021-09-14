@@ -1,8 +1,8 @@
 
-from .elf import ELF
-from .elf_header import ELF_HEADER
-from .program_header import PROGRAM_HEADER
-from .section_header import SECTION_HEADER
+from elf import ELF
+from elf_header import ELF_HEADER
+from program_header import PROGRAM_HEADER
+from section_header import SECTION_HEADER
 
 __all__ = [
     "ELF",
