@@ -1,5 +1,6 @@
 # twelfe
-A python script for parsing Linux ELF files.
+A python library for parsing Linux ELF files.
+It also comes with a simple script to print all headers: *read_twelfe.py*.
 
 ### Naming
 
@@ -31,7 +32,7 @@ Get all flags:
 
 ```console
 $ python3 read_twelfe.py --help
-usage: twelfe.py [-h] -f FILE [-e] [-s] [-p] [-a]
+usage: read_twelfe.py [-h] -f FILE [-e] [-s] [-p] [-a]
 
 optional arguments:
   -h, --help            show this help message and exit
