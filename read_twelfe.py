@@ -1,11 +1,12 @@
 """
-    twelfe is a simple python utiliy to print ELF file headers, including ELF, section and program headers
+    read_twelfe is a simple python utiliy to print ELF file headers, including ELF, section and program headers
 
 """
 
 import argparse
+from twelfe.elf import ELF
 from typing import Any
-from elf import *
+# from twelfe import elf.ELF
 
 
 def main():
@@ -21,22 +22,22 @@ def main():
         print("[!]: No file specified")
         exit(-1)
 
-    elf = ELF.from_file(file)
+    elffile = ELF.from_file(file)
 
     if args["all"]:
-        elf.print_elf_header()
-        elf.print_program_headers()
-        elf.print_section_headers()
+        elffile.print_elf_header()
+        elffile.print_program_headers()
+        elffile.print_section_headers()
         exit(0)
 
     if args["elf"]:
-        elf.print_elf_header()
+        elffile.print_elf_header()
 
     if args["program"]:
-        elf.print_program_headers()
+        elffile.print_program_headers()
 
     if args["section"]:
-        elf.print_section_headers()
+        elffile.print_section_headers()
 
 
 def read_args() -> dict[str, Any]:

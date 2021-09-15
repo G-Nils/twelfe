@@ -22,7 +22,7 @@ $ git clone https://github.com/G-Nils/twelfe.git
 
 $ cd twelfe 
 
-$ pip install . --user
+$ python3 setup.py install --user
 ```
 
 
@@ -30,7 +30,7 @@ $ pip install . --user
 Get all flags:
 
 ```console
-$ python3 twelfe.py --help
+$ python3 read_twelfe.py --help
 usage: twelfe.py [-h] -f FILE [-e] [-s] [-p] [-a]
 
 optional arguments:
@@ -45,7 +45,7 @@ optional arguments:
 
 Print the ELF header:
 ```console
-$ python3 twelfe.py -f test --elf
+$ python3 read_twelfe.py -f test --elf
 
 ELF Header:
 Magic:                                ELF
@@ -71,7 +71,7 @@ Section Header String Table Index:    0x1c
 
 Print the program headers:
 ```console
-$ python3 twelfe.py -f test --program
+$ python3 read_twelfe.py -f test --program
 
 Program Headers:
 Type               Address(virt)          Address(phy)          Offset        Size(file)       Size(mem)     Flags     Align
@@ -92,7 +92,7 @@ R = Read, W = Write, E = Executable
 
 Print the section headers:
 ```console
-$ python3 twelfe.py -f test --section
+$ python3 read_twelfe.py -f test --section
 
 Section Headers: 
 ID     Name               Type               Address          Offset     Size     Flags        Info        Link       Align     Entr. Size     

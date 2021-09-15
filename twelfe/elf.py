@@ -2,10 +2,10 @@
     Represent an ELF file. Consists of ELF, program and section headers
 """
 
-from program_header import PROGRAM_HEADER
-from elf_header import ELF_HEADER
-from section_header import SECTION_HEADER
-from util import read_bytes, read_until_nullbyte
+from .program_header import PROGRAM_HEADER
+from .elf_header import ELF_HEADER
+from .section_header import SECTION_HEADER
+from .util import read_bytes, read_until_nullbyte
 
 
 class ELF(object):
